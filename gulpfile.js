@@ -110,7 +110,7 @@ function concatCSS() {
 
 function javascript() {
   return gulp.src(jsSRC)
-  .pipe(concat('depwp.js'))
+  .pipe(concat('devtsk.js'))
   .pipe(uglify())
   .pipe(lineec())
   .pipe(gulp.dest(jsdist));
@@ -143,7 +143,7 @@ function watch() {
   gulp.watch(styleWatchFiles, gulp.series([css, concatCSS]));
   gulp.watch(jsSRC, javascript);
   gulp.watch(imgSRC, imgmin);
-  gulp.watch([PHPWatchFiles, jsdist + 'depwp.js', scss + 'style.min.css']).on('change', browserSync.reload);
+  gulp.watch([PHPWatchFiles, jsdist + 'devtsk.js', scss + 'style.min.css']).on('change', browserSync.reload);
 }
 
 exports.css = css;

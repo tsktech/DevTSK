@@ -44,7 +44,7 @@ if ( ! function_exists( 'devtsk_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'devtsk' ),
+			'primary' => esc_html__( 'Primary', 'devtsk' ),
 		) );
 
 		/*
@@ -83,6 +83,11 @@ if ( ! function_exists( 'devtsk_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'devtsk_setup' );
 
+function devtsk_add_editor_style () {
+	add_editor_style( get_template_directory() . '/dist/css/editor-style.css');
+}
+add_action( 'admin_init', 'devtsk_add_editor_style');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -94,43 +99,11 @@ function devtsk_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'devtsk_content_width', 640 );
+	// // $GLOBALS['content_width'] = apply_filters( 'devtsk_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'devtsk_content_width', 1140 );
 }
 add_action( 'after_setup_theme', 'devtsk_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function devtsk_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'devtsk' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'devtsk' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'devtsk_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
-function devtsk_scripts() {
-	wp_enqueue_style( 'devtsk-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'devtsk-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'devtsk-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'devtsk_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -151,6 +124,22 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Widgets.
+ */
+require get_template_directory() . '/inc/widgets.php';
+
+/**
+ * Scripts Enqueue.
+ */
+require get_template_directory() . '/inc/scripts.php';
+
+/**
+ * bootStrap NavWalker files.
+ * https://github.com/wp-bootstrap/wp-bootstrap-navwalker
+ */
+require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 /**
  * Load Jetpack compatibility file.

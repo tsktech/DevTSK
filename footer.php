@@ -13,19 +13,18 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+	<footer id="colophon" class="site-footer row">
+		<div class="site-info bg-light col-md-12">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'devtsk' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'devtsk' ), 'WordPress' );
+				printf( esc_html__( 'Proudly Powered by %s', 'devtsk' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'devtsk' ), 'devtsk', '<a href="https://www.tskamath.com">Srikanth Kamath</a>' );
-				?>
+			<a href="<?php echo esc_url( __( 'https://tsktech.in/', 'devtsk' ) ); ?>">
+				<?php printf(esc_html__( 'Theme: %1$s by %2$s.', 'devtsk' ), 'DevTSK', 'TSKAMATH TECHNOLOGIES PVT LTD'); ?>
+			</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
