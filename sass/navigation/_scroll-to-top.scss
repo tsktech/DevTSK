@@ -1,0 +1,59 @@
+.top {
+
+	&:link {
+		color: #fff;
+		background: #333;
+		position: fixed;
+		z-index: 999;
+		bottom: 20px;
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 40px;
+		text-align: center;
+		text-transform: uppercase;
+		opacity: .9;
+		border: none;
+		-webkit-border-radius: 3px;
+		        border-radius: 3px;
+	}
+
+	&:hover {
+		opacity: 1;
+		text-decoration: none;
+		-webkit-transition: all 0.7s ease-in-out 0s;
+				transition: all 0.7s ease-in-out 0s;
+
+	}
+}
+
+/*/*
+===========================
+scroll up css
+===========================
+*/
+/*a.scrollup {
+	background: rgba(0,0,0,0.4);
+    color: #fff;
+    position: fixed;
+    z-index: 999999;
+    bottom: 15px;
+    right: 15px;
+    height: 45px;
+    width: 50px;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+
+
+    display: block;
+    border-radius: 3px;
+}
+a.scrollup:hover {
+    background: rgba(0,0,0,1);
+    color: #30CFEF;
+    transition: all 0.7s ease-in-out 0s;
+    -webkit-transition: all 0.7s ease-in-out 0s;
+}*/

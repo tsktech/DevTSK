@@ -21,3 +21,43 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.cat-links, .tags-links, .edit-link, .comments-link{
+	margin-right: .5rem;
+}
+
+.cat-links,
+.tags-links,
+.edit-link,
+.comments-link {
+	margin-right: .5rem; /*5px;*/
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #2980b9;
+		&:focus,
+		&:hover {
+			border-bottom: 1px solid #2980b9;
+		}
+	}
+}
+
+/*.cat-links,
+.tags-links,
+.edit-link,
+.comments-link {
+	margin-right: .5rem;
+}*/
+
+.edit-link {
+	margin-left: .5rem;
+}
+/*
+.entry-title {
+	@at-root {
+		h1#{&},
+      	h2#{&} {
+			margin-top: 1.5em;
+		}
+	}
+}*/

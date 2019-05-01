@@ -1,0 +1,33 @@
+.site-info {
+	text-align: center;
+}
+
+.site-title {
+		margin:10px 0 0 -2px;
+		padding: 0;
+		line-height: 1em;
+		font-size: 30px;
+		letter-spacing: 1px;
+
+		a {
+			margin: 0;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+}
+
+
+.site-description {
+	font-size: 1rem; /*16px;*/
+	margin: 10px 0 0;
+	letter-spacing: 1px;
+}
+
+#masthead {
+	margin-bottom: 1.875rem; /*30px;*/
+}
+
+.site-footer {
+	margin-top: 1.250rem;
+}

@@ -26,8 +26,10 @@ textarea {
 
 select {
 	border: 1px solid $color__border-input;
+	vertical-align: top;
 }
 
 textarea {
 	width: 100%;
+	max-width: 100%;
 }
