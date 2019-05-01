@@ -35,3 +35,5 @@ function devtsk_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'devtsk_pingback_header' );
+
+

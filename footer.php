@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer row">
+	<footer id="colophon" class="site-footer row" role="contentinfo">
 		<div class="site-info bg-light col-md-12">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'devtsk' ) ); ?>">
 				<?php

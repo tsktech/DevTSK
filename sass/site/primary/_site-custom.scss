@@ -31,3 +31,12 @@
 .site-footer {
 	margin-top: 1.250rem;
 }
+
+
+#secondary .widget_nav_menu {
+	    -webkit-box-orient: vertical !important;
+	    -webkit-box-direction: normal !important;
+	    -ms-flex-direction: column;
+	    flex-direction: column !important;
+	    overflow: auto;
+}

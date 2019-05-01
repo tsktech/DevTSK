@@ -1,4 +1,19 @@
 <?php
+
+//include custom jQuery
+
+// include custom Jquery
+function devwp_include_custom_jquery() {
+	if ( ! is_admin() ) {
+		wp_deregister_script('jquery');
+		wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js', array(), null, false);
+		wp_enqueue_script( 'jquery');
+	}
+}
+add_action( 'init', 'devwp_include_custom_jquery' );
+
+
+
 /**
  * Enqueue scripts and styles.
  */

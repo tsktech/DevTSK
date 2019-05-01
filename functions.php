@@ -84,7 +84,7 @@ endif;
 add_action( 'after_setup_theme', 'devtsk_setup' );
 
 function devtsk_add_editor_style () {
-	add_editor_style( get_template_directory() . '/dist/css/editor-style.css');
+	add_editor_style( get_template_directory() . '/dist/editor-style.css');
 }
 add_action( 'admin_init', 'devtsk_add_editor_style');
 
@@ -140,6 +140,11 @@ require get_template_directory() . '/inc/scripts.php';
  * https://github.com/wp-bootstrap/wp-bootstrap-navwalker
  */
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+/**
+ * media.
+ */
+require get_template_directory() . '/inc/media.php';
 
 /**
  * Load Jetpack compatibility file.

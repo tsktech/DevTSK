@@ -23,7 +23,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
--- # Normalize --
+# Variables
+# Mixins
+# Bootstrap
+# Font Awesome
+
 # Typography
 # Elements
 # Forms
@@ -41,15 +45,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Blocks
+# Woocommerce
+# Prism
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-# Normalize
+# Bootstrap
 --------------------------------------------------------------*/
-// @import "normalize";
-
+// @import "bootstrap/bootstrap";
+/*--------------------------------------------------------------
+# Fontawesome
+--------------------------------------------------------------*/
+@import "fonts/fontawesome";
+@import "fonts/solid";
+@import "fonts/brands";
+@import "fonts/regular";
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -104,3 +117,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "blocks/blocks";
+/*--------------------------------------------------------------
+# Woocommerce
+--------------------------------------------------------------*/
+@import "woocommerce";
+/*--------------------------------------------------------------
+# Prism
+--------------------------------------------------------------*/
+// @import "prism/prism";
